@@ -1,0 +1,156 @@
+// AboutMe.scss
+@import "../../app.scss";
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+.about{
+    
+    height: 100vh;
+    background: linear-gradient(to right, #092635, #1B4242);
+    
+    
+   
+    
+    h1{
+        padding-top: 50px;
+        text-align: center;
+        color: cadetblue;
+        font-size: 72px;
+
+        @include mobile {
+          font-size: 30px;
+        }
+    
+    }
+
+
+    .about-me 
+    {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         // text-align: center;
+         margin-left: 120px;
+
+         @include mobile {
+          display: flex;
+          flex-direction:column;
+          margin-left: 5px;
+        }
+         
+         img {
+             // border-radius: 50%;
+             width: 30%;
+             height: 50%;
+             object-fit: cover;
+
+             @include mobile {
+              width: 50%;
+             height: 50%;
+            }
+             
+           }
+         .content 
+         {
+             
+              padding: 20px; 
+              text-align: center;
+             //  justify-content: end;
+              width: 50%;
+              .hello{
+                 padding-bottom: 30px;
+                 @include mobile {
+                  padding-bottom: 5px;
+                }
+              }
+              @include mobile {
+                width: 100%;
+              }
+             
+             h2{
+                 font-family: 'Calligraffitti', cursive !important;
+                 font-size: 50px;
+                 color: green;
+             
+       
+                 @include mobile 
+                   {
+                     font-size: 20px;
+                     margin-top: 20px;
+                    }
+               }
+               p {
+                font-size: 20px;
+                color: gray;
+                padding-top: 20px;
+                max-width: 80%;
+                text-align: center;
+                margin-left: 70px;
+          
+                @include mobile {
+                  font-size: 12px;
+                  max-width: 100%;
+                  margin-left: 5px;
+                  padding-top: 5px;
+                }
+              }
+              .skills {
+                // 
+                  margin-top: 25px;
+                 
+               
+                   p {
+                     margin: 0 10px;
+                     margin-top: 10px;
+                     padding: 10px;
+                     border: none;
+                     border-radius: 8px;
+                     display: inline-block;
+                     font-weight: 70px;
+                     font-size: 15px;
+                     background-color: lightgreen;
+                     color: black;
+                     cursor: pointer;
+                     transition: background-color 0.3s;
+               
+                     &:hover {
+                       background-color:lightcoral; // 
+                     }
+               
+                     @include mobile {
+                       font-size: 13px;
+                       padding: 5px;
+                     }
+                   }
+                 
+                 
+               }
+              
+            
+            }
+        }
+           
+       
+        &.dark-mode {
+          background: black;
+        
+          h2 {
+            color:grey 
+          }
+          h1 {
+            color:white!important; // Add !important
+          }
+          .skills{
+            p{
+              background-color: white !important;
+            }
+          }
+        
+        
+          // Add more styles for dark mode as needed
+        }      
+         
+         
+     
+}
+

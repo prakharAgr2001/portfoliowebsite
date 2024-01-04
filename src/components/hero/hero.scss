@@ -1,0 +1,121 @@
+@import "../../app.scss";
+
+$light-mode: #ffffff;
+$dark-mode: black;
+$accent-color: #171717;
+
+.hero {
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  background: linear-gradient(180deg, #092635, #1B4242);
+  position: relative;
+
+  .wrapper {
+   
+    max-width: 1500px;
+    height: 100%;
+    margin-left: 50px;
+    position: relative;
+
+
+    @include mobile {
+      height: 100%;
+      width: 100%;
+      gap: 20px;
+      // align-items: center;
+      // text-align: center;
+      margin-left: 25px;
+    }
+
+    .textContainer {
+      z-index: 333;
+      width: 70%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      // justify-content: center;
+      // margin-top: 80px;
+      padding-top: 80px;
+      gap: 40px;
+      @include mobile {
+       width: 90%;
+      //  gap: 20px;
+       justify-content: left;
+       padding-top: 80px;
+      }
+  
+
+      h2 {
+        font-size: 30px;
+        color: rebeccapurple;
+        letter-spacing: 10px;
+
+      }
+
+      h1 {
+        font-size: 88px;
+        @include mobile {
+          font-size: 26px;
+        }
+      }
+
+      .buttons {
+        button {
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          color: white;
+          margin-right: 20px;
+          cursor: pointer;
+          font-weight: 300;
+          transition: background-color 0.3s; // Add a smooth transition for background-color
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.2) !important; // Change the background color on hover
+    }
+          
+        }
+      }
+    }
+  }
+
+  .slidingTextContainer 
+  {
+    z-index: 1;
+    position: absolute;
+    font-size: 40vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+  }
+
+  // .imageContainer {
+  //   height: 100%;
+  //   position: absolute;
+  //   top: 150px;
+  //   right: 150px;
+
+  //   img {
+  //     width: 70%;
+  //     height: 40%;
+  //     object-fit: cover;
+  //     border-radius: 100%;
+  //   }
+  // }
+
+  &.dark-mode {
+    background: black;
+
+    h2 {
+      color:grey !important; // Add !important
+    }
+
+
+    // Add more styles for dark mode as needed
+  }
+
+  
+}

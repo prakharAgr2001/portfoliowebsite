@@ -1,0 +1,129 @@
+@import "../../app.scss";
+
+.contact {
+  
+ 
+
+  .yo{
+    height: 100vh;
+    max-width: 1366px;
+    margin: auto;
+     display: flex;
+    align-items: center;
+     gap: 50px;
+  // margin-top: 20px;
+  @include mobile {
+    width: 100%;
+    padding: none;
+    margin-top: none;
+    flex-direction: column !important;
+    gap: 5px;
+    // background-color: aquamarine ;
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 20px;
+
+    @include mobile {
+      gap: 5px;
+      text-align: center;
+      align-items: center;
+      margin-top: 7px;
+    }
+
+    h1 {
+        color: cadetblue;
+      font-size: 100px;
+      line-height: 88px;
+
+      @include mobile {
+        margin-top: 22px;
+        font-size: 30px;
+      }
+    }
+    h2 {
+        
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+    span {
+      font-weight: 300;
+      @include mobile {
+        font-size: 13px;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+    box-sizing: border-box;
+     // Enable vertical scrolling if needed
+    
+    
+    @include mobile {
+      padding: 5px;
+      width: 80%;
+    //   overflow: visible !important;
+    overflow-y: auto;
+      height: 100vh !important;
+      
+    }
+
+
+    
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      @include mobile {
+        gap: 5px;
+      }
+      input,
+      textarea {
+        padding: 20px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+
+        @include mobile {
+          padding: 2px;
+        }
+      }
+
+      button {
+        padding: 20px;
+        border: none;
+        background-color: cadetblue;
+        cursor: pointer;
+        font-weight: 500;
+        @include mobile {
+          padding: 5px;
+          
+        }
+      }
+    }
+  }
+  }
+  &.dark-mode {
+    background-color: black  !important;
+
+    h2 {
+      color:grey !important; // Add !important
+    }
+    h1 {
+      color:whitesmoke !important; // Add !important
+    }
+    button {
+      background-color:whitesmoke !important; // Add !important
+    }
+  }
+}
